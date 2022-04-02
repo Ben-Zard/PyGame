@@ -1,0 +1,20 @@
+- Game - Sets up the environment, all of the balls, bricks, paddle, etc., and contains the game loop.
+
+- Overlay - Draws the score and number of lives.
+
+- Paddle - Is subclass of pygame.sprite.Sprite.
+The image will just be a black rectangle.
+The class should hold information about the size and movement speed of the rectangle that represents the paddle.
+There should be methods to move the paddle left and right at that speed.
+Movement should be capped so the paddle can't move off the screen.
+
+- Ball - Is a subclass of pygame.sprite.Sprite.
+The image will be a circle.
+The balls will bounce off walls, the paddle, and bricks.
+When a ball bounces off a brick, the brick will receive damage if 25.
+
+- Brick - Is a subclass of pygame.sprite.Sprite.
+The image will be a randomly chosen color.
+You can do this by randomly choosing an int between 0-255 (inclusive) for each of the Red, Green, and Blue components.
+The health of the brick will be set to 766 - the sum of those values (so 0,0,0 or black will have a health of 766 and 255,255,255 will have a health of 1).
+Brick should have a hit method that removes 25 from its health and destroys itself if health goes to 0 or below.
